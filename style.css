@@ -1,0 +1,136 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{ 
+    margin: 0px;
+    padding:0px;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+.container{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: #a5cbba;
+}
+.list{
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    position: relative;
+    background-color: #263836;
+    box-shadow: 7px 5px 7px black, inset 6px 5px 16px 1px rgba(255,255,255,0.55), -9px -5px 15px rgba(255,255,255,1);
+}
+
+
+.inside-list{
+    /* position: absolute; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.list-item{
+    /* border: 2px solid red; */
+    position:absolute;
+    width: 85%;
+    top: 49%;
+    transform: rotate(calc(30deg*var(--i) + 90deg));
+    z-index: 1;
+}
+.list-item span{
+    position: absolute;
+
+    top:-10px;
+    transform: rotate(calc(-90deg - 30deg*var(--i)));
+    font-weight: 700;
+    color: white;
+}
+.inside_clock{
+
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    position: absolute;
+    top:48px;
+    left:51px;
+    background: linear-gradient(45deg,rgb(253, 5, 17),blue);
+    animation: animate 4s linear infinite;
+}
+
+@keyframes animate {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+.inside_clock::before{
+    content: '';
+    position:absolute;
+    inset: 5px;
+    height: 190px;
+    width: 190px;
+    background-color: #263836;
+    border-radius: 50%;
+}
+
+
+.sticks{
+    position: absolute;
+    top:48%;
+    left:49%;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+}
+.hour{
+    top:50%;
+    left:50%;
+    position: absolute;
+    height: 10px;
+    width: 60px;
+    border-radius: 100px;
+    background-color: rgb(0, 0, 0);
+}
+.minute{
+    top:50%;
+    left:50%;
+    position: absolute;
+    height: 5px;
+    width: 100px;
+    border-radius: 100px;
+    background-color:  black;
+    
+}
+.second{
+    position: absolute;
+    top:50%;
+    left:50%;
+    height: 2px;
+    width: 90px;
+    border-radius: 100px;
+    background-color: rgb(253, 5, 17);
+}
+
+.display{
+    position:absolute;
+    top:20rem;
+    /* border: 2px solid red; */
+    border-radius: 1rem;
+    color: white;
+    font-weight: 700;
+    background-color:#263836;
+    padding: 0.2rem 0.7rem;
+    box-shadow: 7px 5px 7px black, inset 6px 5px 16px 1px rgba(255,255,255,0.55), -9px -5px 15px rgba(255,255,255,1);
+}
+
+.display > span{
+    opacity: 90%;
+}
+
+
+
+
