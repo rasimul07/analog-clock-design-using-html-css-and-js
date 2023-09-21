@@ -1,7 +1,7 @@
 git clone [enter reposistory path] <br>
 Open the project in any code editor and open with live server
 
-
+Website is live at https://rasimul07.github.io/analog-clock-design-using-html-css-and-js/
 ### website clip is here
 
 
